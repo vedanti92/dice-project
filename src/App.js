@@ -1,39 +1,39 @@
 import './App.css';
 
 const dice = (
-  <div>
-    <div className='face-1'>
-      <div className='dot'></div>
-    </div>
+  <div className='face'>
+    <span className='face-1'>
+      <span className='dot'></span>
+    </span>
     <div className='face-2'>
-      <div className='dot'></div>
-      <div className='dot'></div>
+      <span className='dot'></span>
+      <span className='dot'></span>
     </div>
     <div className='face-3'>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
     </div>
     <div className='face-4'>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
     </div>
     <div className='face-5'>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
     </div>
     <div className='face-6'>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
+      <span className='dot'></span>
     </div>
   </div>
 )
