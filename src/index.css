@@ -22,8 +22,13 @@ img {
   font-size: 25px;
   font-family: 'Young Serif', serif;
   border: none;
-  background-color: rgb(250, 113, 193);
+  background-color: rgb(68, 68, 68);
   color: white;
   border-radius: 5px;
   padding: auto;
+}
+
+.rollbtn:hover {
+  cursor: pointer;
+  background-color: black;
 }
