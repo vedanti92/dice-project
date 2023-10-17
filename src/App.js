@@ -20,13 +20,17 @@ function App() {
 
   const [image, setNewImage] = useState(dice[0])
 
+  const [diceCount, setDiceCount] = useState(2);
+  const updateDiceCount = (evt) => setDiceCount(parseInt(evt.target.value) || 2);
+
   return (
     <div className="App">
-      <select className="dropdown">
-        <option value="1">•</option>
-        <option value="2">••</option>
-      </select>
-      <br />
+      <div>
+        <select className="dropdown" defaultValue={diceCount} onChange={updateDiceCount}>
+          <option value="1">•</option>
+          <option value="2">••</option>
+        </select>
+      </div>
       <img src={image} alt="Dice" />
       <div>
           <button className='rollbtn' onClick={rollDice}>ROLL</button>
