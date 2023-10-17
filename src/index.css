@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
 body {
   margin: 20px;
   box-sizing: border-box;
@@ -14,4 +16,14 @@ img {
   position: relative;
   display: inline-block;
   font-size: 30px;
+}
+
+.rollbtn {
+  font-size: 25px;
+  font-family: 'Young Serif', serif;
+  border: none;
+  background-color: rgb(250, 113, 193);
+  color: white;
+  border-radius: 5px;
+  padding: auto;
 }
