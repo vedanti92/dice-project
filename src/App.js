@@ -26,9 +26,10 @@ function App() {
         <option value="1">•</option>
         <option value="2">••</option>
       </select>
+      <br />
       <img src={image} alt="Dice" />
       <div>
-          <button onClick={rollDice}>ROLL</button>
+          <button className='rollbtn' onClick={rollDice}>ROLL</button>
       </div>
     </div>
   );
