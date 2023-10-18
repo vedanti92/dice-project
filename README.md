@@ -1,5 +1,7 @@
 Whenever you play any offline game such as Ludo or Snakes and Ladders, you may come across a problem where you won't have a physical die with you. Now the games mentioned cannot be started until you have a die with you.
 
+Hence, this project solves this problem where on my website, you can get a virtual die and it will give you a random figure everytime you tap the 'ROLL' button.
+
 
 # Getting Started with Create React App
 
