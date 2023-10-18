@@ -1,4 +1,4 @@
-Whenever you play any offline game such as Ludo or Snakes and Ladders, you may come across a problem where you won't have a physical die with you.
+Whenever you play any offline game such as Ludo or Snakes and Ladders, you may come across a problem where you won't have a physical die with you. Now the games mentioned cannot be started until you have a die with you.
 
 
 # Getting Started with Create React App
