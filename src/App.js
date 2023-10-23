@@ -8,12 +8,22 @@ import Dice5 from './Dice_Images/Dice5.png';
 import Dice6 from './Dice_Images/Dice6.png';
 
 function App() {
-  const dice = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
+  const dice = [
+    Dice1,
+    Dice2,
+    Dice3,
+    Dice4,
+    Dice5,
+    Dice6,
+  ];
+
 
   const [imageFirst, setNewImage1] = useState(dice[0]);
   const [imageSecond, setNewImage2] = useState(dice[0]);
   const [value, setValue] = useState(1);
   const [diceCount, setDiceCount] = useState(1);
+  const [dice1, setDice1] = useState(1)
+  const [dice2, setDice2] = useState(1)
 
   const updateDiceCount = (evt) => {
     const selectedValue = parseInt(evt.target.value) || 1;
@@ -21,22 +31,22 @@ function App() {
     setValue(selectedValue); // Update the 'value' state when the dropdown changes.
   };
 
-  const rollDice1 = () => {
-    const newDice = Math.floor(Math.random() * 6);
-    setNewImage1(dice[newDice]);
-    rollDice2();
-  };
+  const rollDice = () => {
+    const newDice1 = Math.floor(Math.random() * 6);
+    setNewImage1(dice[newDice1]);
 
-  const rollDice2 = () => {
-    const newDice = Math.floor(Math.random() * 6);
-    setNewImage2(dice[newDice]);
+    const newDice2 = Math.floor(Math.random() * 6);
+    setNewImage2(dice[newDice2]);
+
+    setDice1(newDice1);
+    setDice2(newDice2);
   };
 
   useEffect(() => {
     // This code will run whenever the 'value' state changes.
     // You can place any logic here that should run when 'value' changes.
     if (value === 2) {
-      rollDice2(); // Automatically roll the second dice when 'value' becomes 2.
+      rollDice(); // Automatically roll the second dice when 'value' becomes 2.
     }
   }, [value]); // The effect depends on the 'value' state.
 
@@ -59,7 +69,7 @@ function App() {
       )}
 
       <div>
-        <button className="rollbtn" onClick={rollDice1}>
+        <button className="rollbtn" onClick={rollDice}>
           ROLL
         </button>
       </div>
