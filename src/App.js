@@ -29,7 +29,7 @@ function App() {
   const updateDiceCount = (evt) => {
     const selectedValue = parseInt(evt.target.value) || 1;
     setDiceCount(selectedValue);
-    setValue(selectedValue); // Update the 'value' state when the dropdown changes.
+    setValue(selectedValue);
   };
 
   const rollDice = () => {
