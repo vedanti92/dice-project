@@ -24,6 +24,7 @@ function App() {
   const [diceCount, setDiceCount] = useState(1);
   const [dice1, setDice1] = useState(1)
   const [dice2, setDice2] = useState(1)
+  const [rolling, setRolling] = useState(false); 
 
   const updateDiceCount = (evt) => {
     const selectedValue = parseInt(evt.target.value) || 1;
@@ -32,23 +33,27 @@ function App() {
   };
 
   const rollDice = () => {
-    const newDice1 = Math.floor(Math.random() * 6);
-    setNewImage1(dice[newDice1]);
+    setRolling(true);
 
-    const newDice2 = Math.floor(Math.random() * 6);
-    setNewImage2(dice[newDice2]);
+    setTimeout(() => {
+      const newDice1 = Math.floor(Math.random() * 6);
+      setNewImage1(dice[newDice1]);
 
-    setDice1(newDice1);
-    setDice2(newDice2);
+      const newDice2 = Math.floor(Math.random() * 6);
+      setNewImage2(dice[newDice2]);
+
+      setDice1(newDice1);
+      setDice2(newDice2);
+
+      setRolling(false);
+    }, 2000);
   };
 
   useEffect(() => {
-    // This code will run whenever the 'value' state changes.
-    // You can place any logic here that should run when 'value' changes.
     if (value === 2) {
-      rollDice(); // Automatically roll the second dice when 'value' becomes 2.
+      rollDice();
     }
-  }, [value]); // The effect depends on the 'value' state.
+  }, [value]);
 
   return (
     <div className="App">
@@ -60,16 +65,16 @@ function App() {
       </div>
 
       {value === 1 ? (
-        <img src={imageFirst} alt="Dice" />
+        <img src={imageFirst} alt="Dice" className={`dice ${rolling ? "rolling" : ""}`} />
       ) : (
         <>
-          <img src={imageFirst} alt="Dice" />
-          <img src={imageSecond} alt="Dice" />
+          <img src={imageFirst} alt="Dice" className={`dice ${rolling ? "rolling" : ""}`} />
+          <img src={imageSecond} alt="Dice" className={`dice ${rolling ? "rolling" : ""}`} />
         </>
       )}
 
       <div>
-        <button className="rollbtn" onClick={rollDice}>
+        <button className='rollbtn' onClick={rollDice}>
           ROLL
         </button>
       </div>
