@@ -4,8 +4,6 @@ Hence, this project solves this problem where on my website, you can get a virtu
 
 This website also provides you the option of playing with two dice simultaneously if required by the game.
 
-This website will also have an additional feature where you can manually record your score and select the winner according to your rules.
-
 
 # Getting Started with Create React App
 
